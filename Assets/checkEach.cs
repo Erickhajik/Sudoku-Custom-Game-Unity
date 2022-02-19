@@ -4,49 +4,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class checkEach : MonoBehaviour
 {
-   public InputField A2;
-  public InputField A3;
-  public InputField A5;   
-  public InputField A6;
-  public InputField A7;
-  public InputField A9;
-  public InputField B1;
-  public InputField B3;
-  public InputField B4;
-  public InputField B7;
-  public InputField B9;
-  public InputField C1;
-  public InputField C6;
- public  InputField C7;
-  public InputField C8;
-  public InputField D2;
-   public InputField D4;
-  public InputField D5;
-  public InputField D7;
-  public InputField E1;
-  public InputField E3;
-  public InputField E9;
-  public InputField F4;
-  public InputField F5;
-  public InputField F6;
-  public InputField F7;
-  public InputField F9;
-  public InputField G1;
-  public InputField G2;
-  public InputField G4;
-  public InputField G5;
- public  InputField G7;
-  public InputField G8;
-  public InputField H6;
-  public InputField H9;
-  public InputField I1;
-  public InputField I2;
-  public InputField I4;
-  public InputField I7;
-  public InputField I8;
-  public InputField I9;
+    public InputField[] fillOut;
+ //   public InputField A2;
+ //  public InputField A3;
+ //  public InputField A5;   
+ //  public InputField A6;
+ //  public InputField A7;
+ //  public InputField A9;
+ //  public InputField B1;
+ //  public InputField B3;
+ //  public InputField B4;
+ //  public InputField B7;
+ //  public InputField B9;
+ //  public InputField C1;
+ //  public InputField C6;
+ // public  InputField C7;
+ //  public InputField C8;
+ //  public InputField D2;
+ //   public InputField D4;
+ //  public InputField D5;
+ //  public InputField D7;
+ //  public InputField E1;
+ //  public InputField E3;
+ //  public InputField E9;
+ //  public InputField F4;
+ //  public InputField F5;
+ //  public InputField F6;
+ //  public InputField F7;
+ //  public InputField F9;
+ //  public InputField G1;
+ //  public InputField G2;
+ //  public InputField G4;
+ //  public InputField G5;
+ // public  InputField G7;
+ //  public InputField G8;
+ //  public InputField H6;
+ //  public InputField H9;
+ //  public InputField I1;
+ //  public InputField I2;
+ //  public InputField I4;
+ //  public InputField I7;
+ //  public InputField I8;
+ //  public InputField I9;
   public GameObject img;
   void Start ()
   {
@@ -62,7 +64,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkA2()
     {
-        if (A2.text == "2")
+        if (fillOut[0].text == "2")
         {
         
             return true;
@@ -72,7 +74,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkA3()
     {
-        if (A3.text == "7")
+        if (fillOut[1].text == "7")
         {
             return true;
         }
@@ -81,7 +83,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkA5()
     {
-        if (A5.text == "5")
+        if (fillOut[2].text == "5")
         {
             return true;
         }
@@ -90,7 +92,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkA6()
     {
-        if (A6.text == "4")
+        if (fillOut[3].text == "4")
         {
             return true;
         }
@@ -99,7 +101,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkA7()
     {
-        if (A7.text == "3")
+        if (fillOut[4].text == "3")
         {
             return true;
         }
@@ -108,7 +110,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkA9()
     {
-        if (A9.text == "6")
+        if (fillOut[5].text == "6")
         {
             return true;
         }
@@ -117,7 +119,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkB1()
     {
-        if (B1.text == "9")
+        if (fillOut[6].text == "9")
         {
             return true;
         }
@@ -126,7 +128,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkB3()
     {
-        if (B3.text == "5")
+        if (fillOut[7].text == "5")
         {
             return true;
         }
@@ -135,7 +137,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkB4()
     {
-        if (B4.text == "3")
+        if (fillOut[8].text == "3")
         {
             return true;
         }
@@ -144,7 +146,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkB7()
     {
-        if (B7.text == "1")
+        if (fillOut[9].text == "1")
         {
             return true;
         }
@@ -153,7 +155,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkB9()
     {
-        if (B9.text == "8")
+        if (fillOut[10].text == "8")
         {
             return true;
         }
@@ -162,7 +164,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkC1()
     {
-        if (C1.text == "3")
+        if (fillOut[11].text == "3")
         {
             return true;
         }
@@ -171,7 +173,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkC6()
     {
-        if (C6.text == "9")
+        if (fillOut[12].text == "9")
         {
             return true;
         }
@@ -180,7 +182,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkC7()
     {
-        if (C7.text == "7")
+        if (fillOut[13].text == "7")
         {
             return true;
         }
@@ -189,7 +191,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkC8()
     {
-        if (C8.text == "5")
+        if (fillOut[14].text == "5")
         {
             return true;
         }
@@ -198,7 +200,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkD2()
     {
-        if (D2.text == "9")
+        if (fillOut[15].text == "9")
         {
             return true;
         }
@@ -207,7 +209,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkD4()
     {
-        if (D4.text == "4")
+        if (fillOut[16].text == "4")
         {
             return true;
         }
@@ -216,7 +218,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkD5()
     {
-        if (D5.text == "6")
+        if (fillOut[17].text == "6")
         {
             return true;
         }
@@ -225,7 +227,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkD7()
     {
-        if (D7.text == "2")
+        if (fillOut[18].text == "2")
         {
             return true;
         }
@@ -234,7 +236,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkE1()
     {
-        if (E1.text == "4")
+        if (fillOut[19].text == "4")
         {
             return true;
         }
@@ -243,7 +245,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkE3()
     {
-        if (E3.text == "2")
+        if (fillOut[20].text == "2")
         {
             return true;
         }
@@ -252,7 +254,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkE9()
     {
-        if (E9.text == "9")
+        if (fillOut[21].text == "9")
         {
             return true;
         }
@@ -261,7 +263,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkF4()
     {
-        if (F4.text == "9")
+        if (fillOut[22].text == "9")
         {
             return true;
         }
@@ -270,7 +272,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkF5()
     {
-        if (F5.text == "7")
+        if (fillOut[23].text == "7")
         {
             return true;
         }
@@ -279,7 +281,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkF6()
     {
-        if (F6.text == "2")
+        if (fillOut[24].text == "2")
         {
             return true;
         }
@@ -288,7 +290,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkF7()
     {
-        if (F7.text == "4")
+        if (fillOut[25].text == "4")
         {
             return true;
         }
@@ -297,7 +299,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkF9()
     {
-        if (F9.text == "5")
+        if (fillOut[26].text == "5")
         {
             return true;
         }
@@ -306,7 +308,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkG1()
     {
-        if (G1.text == "7")
+        if (fillOut[27].text == "7")
         {
             return true;
         }
@@ -315,7 +317,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkG2()
     {
-        if (G2.text == "8")
+        if (fillOut[28].text == "8")
         {
             return true;
         }
@@ -324,7 +326,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkG4()
     {
-        if (G4.text == "2")
+        if (fillOut[29].text == "2")
         {
             return true;
         }
@@ -333,7 +335,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkG5()
     {
-        if (G5.text == "3")
+        if (fillOut[30].text == "3")
         {
             return true;
         }
@@ -342,7 +344,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkG7()
     {
-        if (G7.text == "9")
+        if (fillOut[31].text == "9")
         {
             return true;
         }
@@ -351,7 +353,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkG8()
     {
-        if (G8.text == "1")
+        if (fillOut[32].text == "1")
         {
             return true;
         }
@@ -360,7 +362,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkH6()
     {
-        if (H6.text == "6")
+        if (fillOut[33].text == "6")
         {
             return true;
         }
@@ -369,7 +371,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkH9()
     {
-        if (H9.text == "3")
+        if (fillOut[34].text == "3")
         {
             return true;
         }
@@ -378,7 +380,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkI1()
     {
-        if (I1.text == "2")
+        if (fillOut[35].text == "2")
         {
             return true;
         }
@@ -387,7 +389,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkI2()
     {
-        if (I2.text == "3")
+        if (fillOut[36].text == "3")
         {
             return true;
         }
@@ -396,7 +398,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkI4()
     {
-        if (I4.text == "8")
+        if (fillOut[37].text == "8")
         {
             return true;
         }
@@ -405,7 +407,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkI7()
     {
-        if (I7.text == "5")
+        if (fillOut[38].text == "5")
         {
             return true;
         }
@@ -414,7 +416,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkI8()
     {
-        if (I8.text == "6")
+        if (fillOut[39].text == "6")
         {
             return true;
         }
@@ -423,7 +425,7 @@ public class checkEach : MonoBehaviour
     }
     bool checkI9()
     {
-        if (I9.text == "7")
+        if (fillOut[40].text == "7")
         {
             return true;
         }
