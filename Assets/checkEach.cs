@@ -8,428 +8,116 @@ using UnityEngine.UI;
 public class checkEach : MonoBehaviour
 {
     public InputField[] fillOut;
- //   public InputField A2;
- //  public InputField A3;
- //  public InputField A5;   
- //  public InputField A6;
- //  public InputField A7;
- //  public InputField A9;
- //  public InputField B1;
- //  public InputField B3;
- //  public InputField B4;
- //  public InputField B7;
- //  public InputField B9;
- //  public InputField C1;
- //  public InputField C6;
- // public  InputField C7;
- //  public InputField C8;
- //  public InputField D2;
- //   public InputField D4;
- //  public InputField D5;
- //  public InputField D7;
- //  public InputField E1;
- //  public InputField E3;
- //  public InputField E9;
- //  public InputField F4;
- //  public InputField F5;
- //  public InputField F6;
- //  public InputField F7;
- //  public InputField F9;
- //  public InputField G1;
- //  public InputField G2;
- //  public InputField G4;
- //  public InputField G5;
- // public  InputField G7;
- //  public InputField G8;
- //  public InputField H6;
- //  public InputField H9;
- //  public InputField I1;
- //  public InputField I2;
- //  public InputField I4;
- //  public InputField I7;
- //  public InputField I8;
- //  public InputField I9;
-  public GameObject img;
+    public int[] emptyNum;
+  public GameObject Score;
+  public GameObject GameBack;
+ 
   void Start ()
   {
+    
       GameTime.StartTimer();
   }
     void Update()
     {
-        if (checkA2() && checkA3() && checkA5() && checkA6() && checkA7() && checkA9() && checkB1() && checkB3() && checkB4() && checkB7() && checkB9() && checkC1() && checkC6() && checkC7() && checkC8() && checkD2() && checkD4() && checkD5() && checkD7() && checkE1() && checkE3() && checkE9() && checkF4() && checkF5() && checkF6() && checkF7() && checkF9() && checkG1() && checkG2() && checkG4() && checkG5() && checkG7() && checkG8() && checkH6() && checkH9() && checkI1() && checkI2() && checkI4() && checkI7() && checkI8() && checkI9())
-        {
-            img.gameObject.SetActive(true);
-            Debug.Log("y");
-        }
-    }
-    bool checkA2()
-    {
-        if (fillOut[0].text == "2")
-        {
+        if(check1(fillOut,emptyNum)&& check2(fillOut,emptyNum) && check3(fillOut,emptyNum) && check4(fillOut,emptyNum) && check5(fillOut,emptyNum)&& check6(fillOut,emptyNum) && check7(fillOut,emptyNum) && check8(fillOut,emptyNum) && check9(fillOut,emptyNum))
+            GameBack.SetActive(false);
+        Score.SetActive(true);
+    
         
-            return true;
-        }
 
-        return false;
+        
     }
-    bool checkA3()
+    bool check1(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[1].text == "7")
-        {
-            return true;
+        if (fillOut[0].text == emptyNum[0].ToString() &&fillOut[1].text == emptyNum[1].ToString() &&fillOut[2].text == emptyNum[2].ToString() &&fillOut[3].text == emptyNum[3].ToString() &&fillOut[4].text == emptyNum[4].ToString() &&fillOut[5].text == emptyNum[5].ToString() &&fillOut[6].text == emptyNum[6].ToString() &&fillOut[7].text == emptyNum[7].ToString() &&fillOut[8].text == emptyNum[8].ToString())
+            {
+            
+                return true;
+            }
+        
+            return false;
         }
-
-        return false;
-    }
-    bool checkA5()
+    bool check2(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[2].text == "5")
+        if (fillOut[9].text == emptyNum[9].ToString() &&fillOut[10].text == emptyNum[10].ToString() &&fillOut[11].text == emptyNum[11].ToString() &&fillOut[12].text == emptyNum[12].ToString() &&fillOut[13].text == emptyNum[13].ToString() &&fillOut[14].text == emptyNum[14].ToString() &&fillOut[15].text == emptyNum[15].ToString() &&fillOut[16].text == emptyNum[16].ToString() &&fillOut[17].text == emptyNum[17].ToString())
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkA6()
+    bool check3(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[3].text == "4")
+        if (fillOut[18].text == emptyNum[18].ToString() &&fillOut[19].text == emptyNum[19].ToString() &&fillOut[20].text == emptyNum[20].ToString() &&fillOut[21].text == emptyNum[21].ToString() &&fillOut[22].text == emptyNum[22].ToString() &&fillOut[23].text == emptyNum[23].ToString() &&fillOut[24].text == emptyNum[24].ToString() &&fillOut[25].text == emptyNum[25].ToString() &&fillOut[26].text == emptyNum[26].ToString() )
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkA7()
+    bool check4(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[4].text == "3")
+        if (fillOut[27].text == emptyNum[27].ToString() &&fillOut[28].text == emptyNum[28].ToString() &&fillOut[29].text == emptyNum[29].ToString() &&fillOut[30].text == emptyNum[30].ToString() &&fillOut[31].text == emptyNum[31].ToString() &&fillOut[32].text == emptyNum[32].ToString() &&fillOut[33].text == emptyNum[33].ToString() &&fillOut[34].text == emptyNum[34].ToString() &&fillOut[35].text == emptyNum[35].ToString())
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkA9()
+    bool check5(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[5].text == "6")
+        if (fillOut[36].text == emptyNum[36].ToString() &&fillOut[37].text == emptyNum[37].ToString() &&fillOut[38].text == emptyNum[38].ToString() &&fillOut[39].text == emptyNum[39].ToString() &&fillOut[40].text == emptyNum[40].ToString() &&fillOut[41].text == emptyNum[41].ToString() &&fillOut[42].text == emptyNum[42].ToString() &&fillOut[43].text == emptyNum[43].ToString() &&fillOut[44].text == emptyNum[44].ToString() )
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkB1()
+    bool check6(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[6].text == "9")
+        if (fillOut[45].text == emptyNum[45].ToString() &&fillOut[46].text == emptyNum[46].ToString() &&fillOut[47].text == emptyNum[47].ToString() &&fillOut[48].text == emptyNum[48].ToString() &&fillOut[49].text == emptyNum[49].ToString() &&fillOut[50].text == emptyNum[50].ToString() &&fillOut[51].text == emptyNum[51].ToString() &&fillOut[52].text == emptyNum[52].ToString() &&fillOut[53].text == emptyNum[53].ToString())
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkB3()
+    bool check7(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[7].text == "5")
+        if (fillOut[54].text == emptyNum[54].ToString() &&fillOut[55].text == emptyNum[55].ToString() &&fillOut[56].text == emptyNum[56].ToString() &&fillOut[57].text == emptyNum[57].ToString() &&fillOut[58].text == emptyNum[58].ToString() &&fillOut[59].text == emptyNum[59].ToString() &&fillOut[60].text == emptyNum[60].ToString() &&fillOut[61].text == emptyNum[61].ToString() &&fillOut[62].text == emptyNum[62].ToString())
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkB4()
+    bool check8(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[8].text == "3")
+        if (fillOut[63].text == emptyNum[63].ToString() &&fillOut[64].text == emptyNum[64].ToString() &&fillOut[65].text == emptyNum[65].ToString() &&fillOut[66].text == emptyNum[66].ToString() &&fillOut[67].text == emptyNum[67].ToString() &&fillOut[68].text == emptyNum[68].ToString() &&fillOut[69].text == emptyNum[69].ToString() &&fillOut[70].text == emptyNum[70].ToString() &&fillOut[71].text == emptyNum[71].ToString())
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkB7()
+    bool check9(InputField[] fillOut,int[] emptyNum)
     {
-        if (fillOut[9].text == "1")
+        if (fillOut[72].text == emptyNum[72].ToString() &&fillOut[73].text == emptyNum[73].ToString() &&fillOut[74].text == emptyNum[74].ToString() &&fillOut[75].text == emptyNum[75].ToString() &&fillOut[76].text == emptyNum[76].ToString() &&fillOut[77].text == emptyNum[77].ToString() &&fillOut[78].text == emptyNum[78].ToString() &&fillOut[79].text == emptyNum[79].ToString() &&fillOut[80].text == emptyNum[80].ToString())
         {
+            
             return true;
         }
-
+        
         return false;
     }
-    bool checkB9()
-    {
-        if (fillOut[10].text == "8")
-        {
-            return true;
-        }
+    
 
-        return false;
-    }
-    bool checkC1()
-    {
-        if (fillOut[11].text == "3")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkC6()
-    {
-        if (fillOut[12].text == "9")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkC7()
-    {
-        if (fillOut[13].text == "7")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkC8()
-    {
-        if (fillOut[14].text == "5")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkD2()
-    {
-        if (fillOut[15].text == "9")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkD4()
-    {
-        if (fillOut[16].text == "4")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkD5()
-    {
-        if (fillOut[17].text == "6")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkD7()
-    {
-        if (fillOut[18].text == "2")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkE1()
-    {
-        if (fillOut[19].text == "4")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkE3()
-    {
-        if (fillOut[20].text == "2")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkE9()
-    {
-        if (fillOut[21].text == "9")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkF4()
-    {
-        if (fillOut[22].text == "9")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkF5()
-    {
-        if (fillOut[23].text == "7")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkF6()
-    {
-        if (fillOut[24].text == "2")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkF7()
-    {
-        if (fillOut[25].text == "4")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkF9()
-    {
-        if (fillOut[26].text == "5")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkG1()
-    {
-        if (fillOut[27].text == "7")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkG2()
-    {
-        if (fillOut[28].text == "8")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkG4()
-    {
-        if (fillOut[29].text == "2")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkG5()
-    {
-        if (fillOut[30].text == "3")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkG7()
-    {
-        if (fillOut[31].text == "9")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkG8()
-    {
-        if (fillOut[32].text == "1")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkH6()
-    {
-        if (fillOut[33].text == "6")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkH9()
-    {
-        if (fillOut[34].text == "3")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkI1()
-    {
-        if (fillOut[35].text == "2")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkI2()
-    {
-        if (fillOut[36].text == "3")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkI4()
-    {
-        if (fillOut[37].text == "8")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkI7()
-    {
-        if (fillOut[38].text == "5")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkI8()
-    {
-        if (fillOut[39].text == "6")
-        {
-            return true;
-        }
-
-        return false;
-    }
-    bool checkI9()
-    {
-        if (fillOut[40].text == "7")
-        {
-            return true;
-        }
-
-        return false;
-    }
 }
+
