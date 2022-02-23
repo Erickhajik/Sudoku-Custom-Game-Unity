@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameTime : MonoBehaviour
 {
-    public Text timerText;
+    public Text timeTe;
     public static float startTime;
     public static bool keepTiming;
     public static float time;
@@ -24,9 +24,9 @@ public class GameTime : MonoBehaviour
         }
         
     }
-    public void UpdateTime(){
+     void UpdateTime(){
         time = Time.time - startTime;
-        timerText.text = TimeToString(time);
+        timeTe.text = TimeToString(time);
     }
     public static void StopTimer(){
         keepTiming = false;
@@ -34,7 +34,7 @@ public class GameTime : MonoBehaviour
         time = 0.0f;
 
     }
-    public void ResumeTimer(){
+    public static void ResumeTimer(){
         keepTiming = true;
         startTime = Time.time-time;
     }
