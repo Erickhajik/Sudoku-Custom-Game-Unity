@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,15 +10,14 @@ public class StopMenuFunction : MonoBehaviour
     public GameObject stopGameMain;
     public GameObject gameScreen;
 
-    // public Animation stop;
+   
     // Update is called once per frame
 
     public void stopTheGame()
     {
         gameScreen.SetActive(false);
         stopGameMain.SetActive(true);
-        // stop.Play();
-        GameTime.StopTimer();
+      GameTime.StopTimer();
        
             // GetComponent<Animator>().SetBool("MenuOpenClose",true);
         
