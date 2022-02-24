@@ -11,7 +11,7 @@ public class checkEach : MonoBehaviour
   public GameObject Score;
   public GameObject GameBack;
 
-
+  public static int wrongNum=0;
 
 
   public InputField[] A;
@@ -33,7 +33,7 @@ public class checkEach : MonoBehaviour
       public InputField[] I;
       public int[] Ifill;
 
- 
+      public Text wrongShow;
  
  
  
@@ -51,6 +51,7 @@ public class checkEach : MonoBehaviour
   }
     void Update()
     {
+        wrongShow.text = wrongNum.ToString();
         if (checkA(A, Afill) && checkB(B, Bfill) && checkC(C, Cfill) &&
             checkD(D, Dfill) && checkE(E, Efill) && checkF(F, Ffill) &&
             checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill))
@@ -67,94 +68,366 @@ public class checkEach : MonoBehaviour
     }
     bool checkA(InputField[] A,int[] Afill)
     {
-if(A[0].text == Afill[0].ToString() && A[1].text == Afill[1].ToString() && A[2].text == Afill[2].ToString() && A[3].text == Afill[3].ToString() && A[4].text == Afill[4].ToString() && A[5].text == Afill[5].ToString())       
-{
-       
-                return true;
+        int n = 0;
+        for (int i = 0; i < A.Length; i++)
+        {
+            if (A[i].text == Afill[i].ToString())
+            {
+                n++;
             }
-        
+        }
+
+        if (n == A.Length)
+        {
+            return true;
+        }
             return false;
         }
     bool checkB(InputField[] B,int[] Bfill)
     {
-if(B[0].text == Bfill[0].ToString() && B[1].text == Bfill[1].ToString() && B[2].text == Bfill[2].ToString() && B[3].text == Bfill[3].ToString() && B[4].text == Bfill[4].ToString() && B[5].text == Bfill[5].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < B.Length; i++)
+        {
+            if (B[i].text == Bfill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == B.Length)
+        {
             return true;
         }
-        
         return false;
     }
+    
     bool checkC(InputField[] C,int[] Cfill)
     {
-if(C[0].text == Cfill[0].ToString() && C[1].text == Cfill[1].ToString() && C[2].text == Cfill[2].ToString() && C[3].text == Cfill[3].ToString() && C[4].text == Cfill[4].ToString() && C[5].text == Cfill[5].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < C.Length; i++)
+        {
+            if (C[i].text == Cfill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == C.Length)
+        {
             return true;
         }
-        
         return false;
     }
     bool checkD(InputField[] D,int[] Dfill)
     {
-if(D[0].text == Dfill[0].ToString() && D[1].text == Dfill[1].ToString() && D[2].text == Dfill[2].ToString() && D[3].text == Dfill[3].ToString() && D[4].text == Dfill[4].ToString() && D[5].text == Dfill[5].ToString() && D[6].text == Dfill[6].ToString() && D[7].text == Dfill[7].ToString() && D[8].text == Dfill[8].ToString() )
-{
-            
+        int n = 0;
+        for (int i = 0; i < D.Length; i++)
+        {
+            if (D[i].text == Dfill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == D.Length)
+        {
             return true;
         }
-        
         return false;
     }
     bool checkE(InputField[] E,int[] Efill)
     {
-if(E[0].text == Efill[0].ToString() && E[1].text == Efill[1].ToString() && E[2].text == Efill[2].ToString() && E[3].text == Efill[3].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < E.Length; i++)
+        {
+            if (E[i].text == Efill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == E.Length)
+        {
             return true;
         }
-        
         return false;
     }
     bool checkF(InputField[] F,int[] Ffill)
     {
-if(F[0].text == Ffill[0].ToString() && F[1].text == Ffill[1].ToString() && F[2].text == Ffill[2].ToString() && F[3].text == Ffill[3].ToString() && F[4].text == Ffill[4].ToString() && F[5].text == Ffill[5].ToString() && F[6].text == Ffill[6].ToString() && F[7].text == Ffill[7].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < F.Length; i++)
+        {
+            if (F[i].text == Ffill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == F.Length)
+        {
             return true;
         }
-        
         return false;
     }
     bool checkG(InputField[] G,int[] Gfill)
     {
-if(G[0].text == Gfill[0].ToString() && G[1].text == Gfill[1].ToString() && G[2].text == Gfill[2].ToString() && G[3].text == Gfill[3].ToString() && G[4].text == Gfill[4].ToString() && G[5].text == Gfill[5].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < G.Length; i++)
+        {
+            if (G[i].text == Gfill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == G.Length)
+        {
             return true;
         }
-        
         return false;
     }
     bool checkH(InputField[] H,int[] Hfill)
     {
-if(H[0].text == Hfill[0].ToString() && H[1].text == Hfill[1].ToString() && H[2].text == Hfill[2].ToString() && H[3].text == Hfill[3].ToString() && H[4].text == Hfill[4].ToString() && H[5].text == Hfill[5].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < H.Length; i++)
+        {
+            if (H[i].text == Hfill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == H.Length)
+        {
             return true;
         }
-        
         return false;
     }
     bool checkI(InputField[] I,int[] Ifill)
     {
-if(I[0].text == Ifill[0].ToString() && I[1].text == Ifill[1].ToString() && I[2].text == Ifill[2].ToString() && I[3].text == Ifill[3].ToString() && I[4].text == Ifill[4].ToString() && I[5].text == Ifill[5].ToString())
-{
-            
+        int n = 0;
+        for (int i = 0; i < I.Length; i++)
+        {
+            if (I[i].text == Ifill[i].ToString())
+            {
+                n++;
+            }
+        }
+
+        if (n == I.Length)
+        {
             return true;
         }
-        
         return false;
     }
 
+
+
+
+
+
+    public void checkWrong()
+    {
+        checkAWrong(A,Afill);
+        checkBWrong(B,Bfill);
+        checkCWrong(C,Cfill);
+        checkDWrong(D,Dfill);
+        checkEWrong(E,Efill);
+        checkFWrong(F,Ffill);
+        checkGWrong(G,Gfill);
+        checkHWrong(H,Hfill);
+        checkIWrong(I,Ifill);
+    }
+    
+    
+    
+    
+    
+    
+    void checkAWrong(InputField[] A,int[] Afill)
+    {
+        for (int i = 0; i < A.Length; i++)
+        {
+            if (A[i].text != "")
+            {
+
+                if (A[i].image.color != Color.red)
+                        {
+                            wrongNum++;
+                            A[i].image.color = Color.red;
+                        }
+                       
+                    
+                    else
+                    {
+                        A[i].image.color = Color.white;
+
+                    }
+                }
+            
+        }
+    }
+    void checkBWrong(InputField[] B,int[] Bfill)
+    {
+        for (int i = 0; i < B.Length; i++)
+        {
+            if (B[i].text != "")
+            {
+                if (B[i].text != Bfill[i].ToString())
+                {
+                    wrongNum++;
+
+                    B[i].image.color = Color.red;
+                }
+                else
+                {
+                    B[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkCWrong(InputField[] C,int[] Cfill)
+    {
+        
+        for (int i = 0; i < C.Length; i++)
+        {
+            if (C[i].text != "")
+            {
+                if (C[i].text != Cfill[i].ToString())
+                {
+                    wrongNum++;
+
+                    C[i].image.color = Color.red;
+                }
+                else
+                {
+                    C[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkDWrong(InputField[] D,int[] Dfill)
+    {
+        for (int i = 0; i < D.Length; i++)
+        {
+            if (D[i].text != "")
+            {
+                if (D[i].text != Dfill[i].ToString())
+                {
+                    wrongNum++;
+
+                    D[i].image.color = Color.red;
+                }
+                else
+                {
+                    D[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkEWrong(InputField[] E,int[] Efill)
+    {
+        for (int i = 0; i < E.Length; i++)
+        {
+            if (E[i].text != "")
+            {
+                if (E[i].text != Efill[i].ToString())
+                {
+                    wrongNum++;
+
+                    E[i].image.color = Color.red;
+                }
+                else
+                {
+                    E[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkFWrong(InputField[] F,int[] Ffill)
+    {
+        for (int i = 0; i < F.Length; i++)
+        {
+            if (F[i].text != "")
+            {
+                if (F[i].text != Ffill[i].ToString())
+                {
+                    wrongNum++;
+
+                    F[i].image.color = Color.red;
+                }
+                else
+                {
+                    F[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkGWrong(InputField[] G,int[] Gfill)
+    {
+        for (int i = 0; i < G.Length; i++)
+        {
+            if (G[i].text != "")
+            {
+                if (G[i].text != Gfill[i].ToString())
+                {
+                    wrongNum++;
+
+                    G[i].image.color = Color.red;
+                }
+                else
+                {
+                    G[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkHWrong(InputField[] H,int[] Hfill)
+    {
+        for (int i = 0; i < H.Length; i++)
+        {
+            if (H[i].text != "")
+            {
+                if (H[i].text != Hfill[i].ToString())
+                {
+                    wrongNum++;
+
+                    H[i].image.color = Color.red;
+                }
+                else
+                {
+                    H[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    void checkIWrong(InputField[] I,int[] Ifill)
+    {
+        for (int i = 0; i < I.Length; i++)
+        {
+            if (I[i].text != "")
+            {
+                if (I[i].text != Ifill[i].ToString())
+                {
+                    wrongNum++;
+
+                    I[i].image.color = Color.red;
+                }
+                else
+                {
+                    I[i].image.color = Color.white;
+
+                }
+            }
+        }
+    }
+    
 }
 
