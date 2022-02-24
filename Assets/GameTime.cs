@@ -13,7 +13,7 @@ public class GameTime : MonoBehaviour
     public static float time;
     public static string gameend="";
     public static string gamestart="";
-    
+    public static float time13;
     void Start () {
       
     }
@@ -34,9 +34,16 @@ public class GameTime : MonoBehaviour
         time = 0.0f;
 
     }
+
+    public void stopT()
+    {
+        keepTiming = false;
+        time13 = time;
+    }
     public static void ResumeTimer(){
         keepTiming = true;
-        startTime = Time.time-time;
+        
+        startTime = Time.time-time13;
     }
     public static void StartTimer(){
         keepTiming = true;
