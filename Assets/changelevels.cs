@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class changelevels : MonoBehaviour
 {
-    public void playrandom()
+    public void level1()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("1");
     }
-    
-   
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("SudokuGame");
+    }   
 }

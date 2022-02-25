@@ -32,36 +32,36 @@ public class checkEach : MonoBehaviour
       public int[] Hfill;
       public InputField[] I;
       public int[] Ifill;
-
+      public int checkUsd=0;
       public Text wrongShow;
- 
- 
- 
- 
- 
- 
+      public Text CheckUsed;
+
+      public Animation anim;
+
+      public bool starting = true;
  
  
  
  
   void Start ()
   {
-    
+      anim = gameObject.GetComponent<Animation>();
       GameTime.StartTimer();
+      CheckUsed.text = checkUsd.ToString();
   }
     void Update()
     {
         wrongShow.text = wrongNum.ToString();
         if (checkA(A, Afill) && checkB(B, Bfill) && checkC(C, Cfill) &&
             checkD(D, Dfill) && checkE(E, Efill) && checkF(F, Ffill) &&
-            checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill))
+            checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill)&& starting)
 
         {
-            GameBack.SetActive(false);
-            Score.SetActive(true);
+            anim.Play("Anim");
+            starting = false;
         }
        
-    
+        
         
 
         
@@ -75,6 +75,7 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+
         }
 
         if (n == A.Length)
@@ -110,6 +111,7 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+            
         }
 
         if (n == C.Length)
@@ -127,6 +129,7 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+           
         }
 
         if (n == D.Length)
@@ -144,6 +147,7 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+           
         }
 
         if (n == E.Length)
@@ -161,6 +165,7 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+            
         }
 
         if (n == F.Length)
@@ -178,8 +183,8 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+            
         }
-
         if (n == G.Length)
         {
             return true;
@@ -195,6 +200,7 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+            
         }
 
         if (n == H.Length)
@@ -212,6 +218,8 @@ public class checkEach : MonoBehaviour
             {
                 n++;
             }
+            
+            
         }
 
         if (n == I.Length)
@@ -228,6 +236,8 @@ public class checkEach : MonoBehaviour
 
     public void checkWrong()
     {
+        checkUsd++;
+        CheckUsed.text = checkUsd.ToString();
         checkAWrong(A,Afill);
         checkBWrong(B,Bfill);
         checkCWrong(C,Cfill);
@@ -251,7 +261,7 @@ public class checkEach : MonoBehaviour
             if (A[i].text != "")
             {
 
-                if (A[i].image.color != Color.red)
+                if (A[i].text != Afill[i].ToString())
                         {
                             wrongNum++;
                             A[i].image.color = Color.red;
