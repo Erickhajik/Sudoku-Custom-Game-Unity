@@ -8,9 +8,6 @@ using UnityEngine.UI;
 public class checkEach : MonoBehaviour
 {
 
-  public GameObject Score;
-  public GameObject GameBack;
-
   public static int wrongNum=0;
 
 
@@ -32,9 +29,9 @@ public class checkEach : MonoBehaviour
       public int[] Hfill;
       public InputField[] I;
       public int[] Ifill;
-      public int checkUsd=0;
+      // public int checkUsd=0;
       public Text wrongShow;
-      public Text CheckUsed;
+      // public Text CheckUsed;
 
       public Animation anim;
 
@@ -47,10 +44,11 @@ public class checkEach : MonoBehaviour
   {
       anim = gameObject.GetComponent<Animation>();
       GameTime.StartTimer();
-      CheckUsed.text = checkUsd.ToString();
+      // CheckUsed.text = checkUsd.ToString();
   }
     void Update()
     {
+        checkWrong();
         wrongShow.text = wrongNum.ToString();
         if (checkA(A, Afill) && checkB(B, Bfill) && checkC(C, Cfill) &&
             checkD(D, Dfill) && checkE(E, Efill) && checkF(F, Ffill) &&
@@ -101,7 +99,6 @@ public class checkEach : MonoBehaviour
         }
         return false;
     }
-    
     bool checkC(InputField[] C,int[] Cfill)
     {
         int n = 0;
@@ -229,15 +226,9 @@ public class checkEach : MonoBehaviour
         return false;
     }
 
-
-
-
-
-
     public void checkWrong()
     {
-        checkUsd++;
-        CheckUsed.text = checkUsd.ToString();
+
         checkAWrong(A,Afill);
         checkBWrong(B,Bfill);
         checkCWrong(C,Cfill);
@@ -263,8 +254,9 @@ public class checkEach : MonoBehaviour
 
                 if (A[i].text != Afill[i].ToString())
                         {
-                            wrongNum++;
+                          
                             A[i].image.color = Color.red;
+                            
                         }
                        
                     
@@ -285,7 +277,7 @@ public class checkEach : MonoBehaviour
             {
                 if (B[i].text != Bfill[i].ToString())
                 {
-                    wrongNum++;
+                   
 
                     B[i].image.color = Color.red;
                 }
@@ -306,7 +298,7 @@ public class checkEach : MonoBehaviour
             {
                 if (C[i].text != Cfill[i].ToString())
                 {
-                    wrongNum++;
+                    
 
                     C[i].image.color = Color.red;
                 }
@@ -326,7 +318,7 @@ public class checkEach : MonoBehaviour
             {
                 if (D[i].text != Dfill[i].ToString())
                 {
-                    wrongNum++;
+                   
 
                     D[i].image.color = Color.red;
                 }
@@ -346,7 +338,7 @@ public class checkEach : MonoBehaviour
             {
                 if (E[i].text != Efill[i].ToString())
                 {
-                    wrongNum++;
+                   
 
                     E[i].image.color = Color.red;
                 }
@@ -366,7 +358,7 @@ public class checkEach : MonoBehaviour
             {
                 if (F[i].text != Ffill[i].ToString())
                 {
-                    wrongNum++;
+                   
 
                     F[i].image.color = Color.red;
                 }
@@ -386,7 +378,7 @@ public class checkEach : MonoBehaviour
             {
                 if (G[i].text != Gfill[i].ToString())
                 {
-                    wrongNum++;
+                   
 
                     G[i].image.color = Color.red;
                 }
@@ -406,7 +398,7 @@ public class checkEach : MonoBehaviour
             {
                 if (H[i].text != Hfill[i].ToString())
                 {
-                    wrongNum++;
+                   
 
                     H[i].image.color = Color.red;
                 }
@@ -426,7 +418,7 @@ public class checkEach : MonoBehaviour
             {
                 if (I[i].text != Ifill[i].ToString())
                 {
-                    wrongNum++;
+                  
 
                     I[i].image.color = Color.red;
                 }
